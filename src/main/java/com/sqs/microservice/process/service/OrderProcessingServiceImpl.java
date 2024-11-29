@@ -29,7 +29,7 @@ public class OrderProcessingServiceImpl implements OrderProcessingService {
 
     public void processOrder(OrderDomain orderDomain) {
         try {
-
+            LOGGER.info("Iniciando gravação no banco de dados dos pedidos...");
             OrderEntity orderEntity = OrderMapper.toOrderEntity(orderDomain);
 
             List<OrderItemEntity> orderItemEntities = OrderMapper.toOrderItemsEntities(orderDomain);
@@ -38,9 +38,11 @@ public class OrderProcessingServiceImpl implements OrderProcessingService {
 
             orderItemRepository.saveAll(orderItemEntities);
 
+            LOGGER.info("Gravação no banco de dados finalizada com sucesso...");
+
         } catch (Exception e) {
-            LOGGER.error("Erro ao processar pedido: {}", e.getMessage(), e);
-            throw new RuntimeException("Erro ao processar pedido", e);
+            LOGGER.error("Erro ao realizar gravação no banco de dados: {}", e.getMessage(), e);
+            throw new RuntimeException("Erro ao realizar gravação no banco de dados", e);
         }
     }
 

@@ -11,7 +11,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
@@ -41,7 +40,7 @@ public class OrderProcessing extends TimeLoggerUtilProcess {
         try {
 
             long startTime = System.currentTimeMillis();
-            LOGGER.info("Iniciando processor do pedido...");
+            LOGGER.info("Iniciando process do pedido...");
 
             OrderDto orderDto = parseOrderRequest(orderQueue);
 
@@ -51,10 +50,8 @@ public class OrderProcessing extends TimeLoggerUtilProcess {
             }
 
             double totalPrice = orderCalculationService.calculateTotalPrice(orderDto.getProducts());
-            LOGGER.info("Valor total do pedido {}: {}", orderDto.getOrderId(), totalPrice);
 
             int totalProduct = orderCalculationService.calculateTotalProduct(orderDto.getProducts());
-            LOGGER.info("Quantidade total de produto {}: {}", orderDto.getOrderId(), totalProduct);
 
             OrderDomain orderDomain = getValues(orderDto, totalPrice, totalProduct);
 
@@ -73,6 +70,7 @@ public class OrderProcessing extends TimeLoggerUtilProcess {
 
 
     private OrderDomain getValues(OrderDto orderDto, double totalPrice, int totalProduct) {
+        LOGGER.info("Realizando mapper para domain...");
 
         OrderDomain orderDomain = new OrderDomain();
         orderDomain.setOrderId(orderDto.getOrderId());
@@ -83,11 +81,15 @@ public class OrderProcessing extends TimeLoggerUtilProcess {
         List<ProductDomain> productDomains = ProductProcessing.toProductDomainList(orderDto.getProducts());
         orderDomain.setProducts(productDomains);
 
+        LOGGER.info("Finalizado com sucesso mapper para domain...");
+
         return orderDomain;
 
     }
 
     private OrderDto parseOrderRequest(String orderQueue) {
+        LOGGER.info("Realizando parse do pedido recebido em Json...");
+
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             return objectMapper.readValue(orderQueue, OrderDto.class);

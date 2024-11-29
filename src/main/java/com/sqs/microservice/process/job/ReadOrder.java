@@ -1,9 +1,6 @@
 package com.sqs.microservice.process.job;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sqs.microservice.process.domain.dto.OrderDto;
 import com.sqs.microservice.process.processor.OrderProcessing;
 import com.sqs.microservice.process.util.TimeLoggerUtilProcess;
 import io.awspring.cloud.sqs.annotation.SqsListener;
