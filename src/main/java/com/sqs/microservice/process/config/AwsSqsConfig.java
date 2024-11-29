@@ -1,9 +1,10 @@
-package com.sqs.microservice.config;
+package com.sqs.microservice.process.config;
 
-import com.sqs.microservice.domain.SqsProperties;
+import com.sqs.microservice.process.domain.SqsProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.sqs.SqsAsyncClient;
 
@@ -12,16 +13,15 @@ import java.net.URI;
 @Configuration
 public class AwsSqsConfig {
 
+
     @Autowired
-    private SqsProperties sqsProperties;
+    SqsProperties sqsProperties;
 
     @Bean
     public SqsAsyncClient sqsAsyncClient() {
         return SqsAsyncClient.builder()
-                .endpointOverride(URI.create(sqsProperties.getUri()))
                 .region(Region.US_EAST_1)
+                .credentialsProvider(DefaultCredentialsProvider.create())
                 .build();
     }
-
-
 }

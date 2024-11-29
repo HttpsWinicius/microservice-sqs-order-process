@@ -1,0 +1,12 @@
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\config\AsyncConfig.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\config\AwsSqsConfig.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\domain\OrderDomain.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\domain\ProductDomain.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\domain\SqsProperties.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\job\ReadOrder.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\ProcessApplication.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\processor\OrderProcessing.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\service\OrderCalculationServiceImpl.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\service\OrderStatusServiceImpl.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\service\OrderValidationServiceImpl.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\util\TimeLoggerUtilProcess.java
