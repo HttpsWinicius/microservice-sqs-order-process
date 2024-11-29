@@ -1,16 +1,20 @@
 package com.sqs.microservice.process.domain;
 
+
 import lombok.Data;
-import org.springframework.stereotype.Component;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
-@Component
+@Getter
+@Setter
 @Data
 public class OrderDomain {
 
-    String orderId;
-    List<ProductDomain> products;
-    String status;
-
+    private String orderId;
+    private List<ProductDomain> products;
+    private double totalPrice;
+    private int totalProduct;
+    private String status;
 }

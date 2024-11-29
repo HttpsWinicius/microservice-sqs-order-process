@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-public class OrderValidationServiceImpl {
+public class OrderValidationServiceImpl implements OrderValidationService {
     private final Set<String> processedOrderIds = new HashSet<>();
 
     public boolean isDuplicate(String orderId) {

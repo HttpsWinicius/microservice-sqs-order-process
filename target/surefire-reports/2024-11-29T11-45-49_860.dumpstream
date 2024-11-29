@@ -1,4 +1,4 @@
-# Created at 2024-11-28T21:43:58.083
+# Created at 2024-11-29T11:45:50.398
 Boot Manifest-JAR contains absolute paths in classpath 'A:\Github\microservice-sqs-order-process\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root
