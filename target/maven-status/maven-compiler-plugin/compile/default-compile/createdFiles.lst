@@ -1,0 +1,6 @@
+com\sqs\microservice\process\config\AsyncConfig.class
+com\sqs\microservice\process\util\TimeLoggerUtilProcess.class
+com\sqs\microservice\process\config\AwsSqsConfig.class
+com\sqs\microservice\process\domain\SqsProperties.class
+com\sqs\microservice\process\ProcessApplication.class
+com\sqs\microservice\process\job\ListenOrderQueue.class

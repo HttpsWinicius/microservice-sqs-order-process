@@ -1,0 +1,6 @@
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\config\AsyncConfig.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\config\AwsSqsConfig.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\domain\SqsProperties.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\job\ListenOrderQueue.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\ProcessApplication.java
+A:\Github\microservice-sqs-order-process\src\main\java\com\sqs\microservice\process\util\TimeLoggerUtilProcess.java
