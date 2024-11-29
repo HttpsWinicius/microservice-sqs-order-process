@@ -1,0 +1,12 @@
+com\sqs\microservice\process\config\AsyncConfig.class
+com\sqs\microservice\process\processor\OrderProcessing.class
+com\sqs\microservice\process\config\AwsSqsConfig.class
+com\sqs\microservice\process\job\ReadOrder.class
+com\sqs\microservice\process\service\OrderCalculationServiceImpl.class
+com\sqs\microservice\process\service\OrderValidationServiceImpl.class
+com\sqs\microservice\process\domain\ProductDomain.class
+com\sqs\microservice\process\service\OrderStatusServiceImpl.class
+com\sqs\microservice\process\domain\OrderDomain.class
+com\sqs\microservice\process\util\TimeLoggerUtilProcess.class
+com\sqs\microservice\process\domain\SqsProperties.class
+com\sqs\microservice\process\ProcessApplication.class
