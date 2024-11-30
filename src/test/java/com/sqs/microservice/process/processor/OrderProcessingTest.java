@@ -3,17 +3,18 @@ package com.sqs.microservice.process.processor;
 import com.sqs.microservice.process.domain.dto.OrderDto;
 import com.sqs.microservice.process.service.OrderCalculationService;
 import com.sqs.microservice.process.service.OrderProcessingService;
-import com.sqs.microservice.process.service.OrderStatusService;
 import com.sqs.microservice.process.service.OrderValidationService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.mockito.Mockito.*;
 
-public class OrderProcessingTest {
+@SpringBootTest
+class OrderProcessingTest {
 
     @InjectMocks
     private OrderProcessing orderProcessing;
@@ -23,9 +24,6 @@ public class OrderProcessingTest {
 
     @Mock
     private OrderCalculationService orderCalculationService;
-
-    @Mock
-    private OrderStatusService orderStatusService;
 
     @Mock
     private OrderProcessingService orderProcessingService;

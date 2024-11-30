@@ -1,10 +1,13 @@
 package com.sqs.microservice.process.domain.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.stereotype.Component;
+import lombok.NoArgsConstructor;
 
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProductDto {
 
     String nameProduct;
