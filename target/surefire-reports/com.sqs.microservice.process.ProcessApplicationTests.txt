@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.sqs.microservice.process.ProcessApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.29 s -- in com.sqs.microservice.process.ProcessApplicationTests

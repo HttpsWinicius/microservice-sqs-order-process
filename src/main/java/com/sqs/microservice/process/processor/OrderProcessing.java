@@ -29,9 +29,6 @@ public class OrderProcessing extends TimeLoggerUtilProcess {
     private OrderCalculationService orderCalculationService;
 
     @Autowired
-    private OrderStatusService orderStatusService;
-
-    @Autowired
     private OrderProcessingService orderProcessingService;
 
     @Cacheable
